@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class a {
+            constructor(value1){
+                this.value1=value1
+            }
+        }
+
+        class b extends a {
+            constructor(value1,value2){
+                super(value1);
+                this.value2=value2;
+            }
+        }
+
+        class c extends b{
+            constructor(value1,value2,value3){
+                super(value1,value2);
+                this.value3=value3;
+            }
+
+            getinfo(){
+                let sum=this.value1+this.value2+this.value3;
+                console.log(sum);
+            }
+        }
+
+        let obj=new c(30,20,30);
+        obj.getinfo();
+
+
+
+    </script>
+</body>
+</html>
